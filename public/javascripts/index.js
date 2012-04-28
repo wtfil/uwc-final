@@ -1,3 +1,37 @@
+var TimeLine = (function(arrayOfDates){
+	var timeLine = function(arrayOfDates){
+		var self = this;
+		self.createFile(arrayOfDates,function(data){
+			self.init();
+		});
+	}
+	timeLine.prototype = {
+		init: function(){
+			var self = this;
+			$(function(){
+				var timeline = new VMM.Timeline();
+				timeline.init('data1.json');
+			});
+		},
+		createFile: function(json, callback){
+			var self = this;
+			$.get('/ajax/create/?json=' + JSON.stringify(json), function(data){
+					callback(data);
+			});
+		}
+	} 
+	return new timeLine(arrayOfDates);
+});
+(new TimeLine([{
+	startDate:'2001,4',
+	headline:'Developed an iPad newspaper applicationttittle',
+	text:'Developed an iPad newspaper applicationblabla'
+	},
+	{startDate:'2010,8',
+	headline:'Developed an iPad newspaper applicationttittle',
+	text:'Developed an iPad newspaper applicationblabla'
+	}]
+))
 var onLinkedInLoad = function () {
   var DataCollection = (function () {
     var init = function () {
@@ -92,7 +126,6 @@ var onLinkedInLoad = function () {
         console.log(result);
         this._data = result;
       },
-      
     }
     return new init();
   })();
