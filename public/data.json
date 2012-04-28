@@ -1,0 +1,42 @@
+
+{
+    "timeline":
+    {
+        "headline":"Johnny B Goode",
+        "type":"default",
+		"startDate":"2009,1",
+		"text":"<i><span class='c1'>Designer</span> & <span class='c2'>Developer</span></i>",
+		"asset":
+        {
+            "media":"assets/img/notes.png",
+            "credit":"<a href='http://dribbble.com/shots/221641-iOS-Icon'>iOS Icon by Asher</a>",
+            "caption":""
+        },
+        "date": [
+            {
+                "startDate":"2010,4",
+                "headline":"Developed an iPad newspaper application",
+                "text":"It was a challenge to create both the design and code in a week.",
+                "asset":
+                {
+                }
+            },
+            {
+                "startDate":"2010,8",
+                "headline":"Illustration for a big client.",
+                "text":"",
+                "asset":
+                {
+                }
+            },
+            {
+                "startDate":"2010,12",
+                "headline":"Advert for Volkswagen",
+                "text":"Created the website for their new advertising campaign.",
+                "asset":
+                {
+                }
+            }
+        ]
+    }
+}
