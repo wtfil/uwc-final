@@ -29,7 +29,6 @@ module.exports = {
 			fileContent.timeline.date.push(elem);
 			console.log(elem.startDate);
 		});
-		console.log(fileContent);
 		fs.writeFile(path.normalize(__dirname + '/../public/data1.json'), JSON.stringify(fileContent), function(err) {
 				if(err) {
 						console.log(err);
@@ -43,6 +42,7 @@ module.exports = {
     var get = req.query,
       query = JSON.parse(get.query);
     query.layout = false;
+		console.log(query);
     res.render('form', query);
   }
 }

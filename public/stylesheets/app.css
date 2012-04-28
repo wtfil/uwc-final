@@ -8,9 +8,10 @@
 	body{
 		background-color:#E6E3BB;
 		font-family: 'AwakeRegular', Arial, Tahoma;
-		padding-top:60px;
-		padding-bottom:40px;
+		padding-top:40px;
 		background-color:#EBEBEB;
+		overflow-y:scroll;
+		height:auto;
 	}
 /*head*/
 	.b-head{
@@ -178,3 +179,20 @@
 		resize:none;
 		cursor:text;
 	}
+	/*timeline*/
+	#timeline{
+		height:215px !important;
+		position:static !important;
+	}
+	.nav-previous{
+		display:none !important;
+	}
+	.nav-next{
+		display:none !important;
+	}
+	.slider-item-container{
+		display:none !important;
+	}
+	.slider-container-mask{
+		height:0 !important;
+	}}

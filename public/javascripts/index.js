@@ -1,4 +1,4 @@
-var TimeLine = (function(){
+var TimeLine = (function(arrayOfDates){
 	var timeLine = function(arrayOfDates){
 		var self = this;
 		self.createFile(arrayOfDates,function(data){
@@ -20,17 +20,18 @@ var TimeLine = (function(){
 			});
 		}
 	} 
-	return new timeLine([{
-			startDate:'2001,4',
-			headline:'Developed an iPad newspaper applicationttittle',
-			text:'Developed an iPad newspaper applicationblabla'
-			},
-			{startDate:'2010,8',
-			headline:'Developed an iPad newspaper applicationttittle',
-			text:'Developed an iPad newspaper applicationblabla'
-			}]
-	);
-})();
+	return new timeLine(arrayOfDates);
+});
+(new TimeLine([{
+	startDate:'2001,4',
+	headline:'Developed an iPad newspaper applicationttittle',
+	text:'Developed an iPad newspaper applicationblabla'
+	},
+	{startDate:'2010,8',
+	headline:'Developed an iPad newspaper applicationttittle',
+	text:'Developed an iPad newspaper applicationblabla'
+	}]
+))
 var onLinkedInLoad = function () {
   var DataCollection = (function () {
     var init = function () {
