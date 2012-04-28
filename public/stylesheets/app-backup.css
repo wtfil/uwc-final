@@ -9,7 +9,7 @@
 		font-family: 'AwakeRegular', Arial, Tahoma;
 		padding-top:40px;
 		background-color:#EBEBEB;
-		overflow-y:scroll;
+		overflow-y:scroll !important;
 		height:auto;
 	}
 /*head*/
@@ -143,16 +143,16 @@
 /*resume*/
 	.b-resume{
 		width:800px;
-		margin:15px auto 0;
+		margin:15px auto;
 		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 		border-radius:4px;
 		padding:20px 70px;
 		background-color:#FDFFE3;
-		height:1000px;
 	}
 	.b-resume__title{
 		text-align:center;
 	}
+
 /*section*/
 	.b-section__input{
 		
@@ -164,6 +164,9 @@
 	.b-section__definition{
 		width:600px;
 	}
+	.b-section__title > textarea{
+    width:150px;
+  }
 	textarea{
 		display:block;
 		width:600px;
@@ -175,7 +178,7 @@
 		resize:none;
 		cursor:text;
 	}
-/*timeline*/
+	/*timeline*/
 	#timeline{
 		height:215px !important;
 		position:static !important;
@@ -191,4 +194,13 @@
 	}
 	.slider-container-mask{
 		height:0 !important;
+	}
+	.b-section__date > input + select
+	{
+	float:left;
+		
+	}
+	.btn-right{
+		float:right;
+		color:#333;
 	}

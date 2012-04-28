@@ -20,9 +20,10 @@ div.b-resume
 				td.b-section__title
 					textarea(readonly=true, name="positions-"+key+"-title")= positions[key].title
 				td.b-section__definition
-					select(name="positions-"+key+"-startDate-month", value=positions[key].startDate.month)
-						option(value="12") Грудень
-					textarea(readonly=true, name="positions-"+key+"-startDate-year")= positions[key].startDate.year
-					select(name="positions-"+key+"-endDate-month", value=positions[key].endDate.year)
-						option(value="1") Січень
-					textarea(readonly=true, name="positions-"+key+"-endDate-year")= positions[key].endDate.year
+					div.b-section__date
+						select(name="positions-"+key+"-startDate-month", value=positions[key].startDate.month)
+							option(value="12") Грудень
+						textarea(readonly=true, name="positions-"+key+"-startDate-year")= positions[key].startDate.year
+						select(name="positions-"+key+"-endDate-month", value=positions[key].endDate.year)
+							option(value="1") Січень
+						textarea(readonly=true, name="positions-"+key+"-endDate-year")= positions[key].endDate.year

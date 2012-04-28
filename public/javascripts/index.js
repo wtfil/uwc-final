@@ -31,7 +31,7 @@ var TimeLine = (function(arrayOfDates){
 	headline:'Developed an iPad newspaper applicationttittle',
 	text:'Developed an iPad newspaper applicationblabla'
 	}]
-))
+));
 var onLinkedInLoad = function () {
   var DataCollection = (function () {
     var init = function () {
@@ -57,7 +57,7 @@ var onLinkedInLoad = function () {
           var curr = jQuery(e.currentTarget);
           if(curr.attr('readonly') !== undefined) curr.removeAttr('readonly');
           else curr.attr('readonly', 'readonly');
-        }).autosize();
+        })//.autosize();
       },
       _convertTime: function (time) {
         if (time === true) {
