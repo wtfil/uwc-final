@@ -31,7 +31,7 @@ app.configure('production', function(){
 
 app.get('/', routes.index);
 app.get('/ajax/create', routes.create);
-
+app.get('/ajax/form', routes.getForm);
 app.listen(3000, function(){
   console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
 });

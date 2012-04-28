@@ -38,5 +38,11 @@ module.exports = {
 					res.json({status:'success'})
 				}
 		}); 
-	}
+	},
+  getForm: function (req, res) {
+    var get = req.query,
+      query = JSON.parse(get.query);
+    query.layout = false;
+    res.render('form', query);
+  }
 }
