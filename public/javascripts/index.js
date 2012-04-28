@@ -81,9 +81,11 @@ var onLinkedInLoad = function () {
       rawToData: function (raw) {
         var values = raw.values[0],
           result = {};
+        console.log(raw);
         result.me = {
           firstName: values.firstName,
-          lastName: values.lastName
+          lastName: values.lastName,
+          location: values.location.name
         };
         result.positions = this._getPositions(values);
         result.skills = this._getSkills(values);
@@ -96,13 +98,12 @@ var onLinkedInLoad = function () {
   })();
   IN.Event.on(IN, 'auth', function () {
     IN.API.Profile('me')
-      .fields('positions', 'educations', 'first-name', 'last-name', 'skills')
+      .fields('positions', 'educations', 'first-name', 'last-name', 'skills', 'location', 'summary')
       .result(function (data) {
         DataCollection.rawToData(data);
         DataCollection.form(function (form) {
           jQuery('body').append(form);
         });
-        console.log(DataCollection.timeline());
       })
   })
 }
