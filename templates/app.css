@@ -3,14 +3,14 @@
 		margin:0;
 		padding:0;
 		width:100%;
-		height:100%;
 	}
 	body{
 		background-color:#E6E3BB;
 		font-family: 'AwakeRegular', Arial, Tahoma;
-		padding-top:60px;
-		padding-bottom:40px;
+		padding-top:40px;
 		background-color:#EBEBEB;
+		overflow-y:scroll;
+		height:auto;
 	}
 /*head*/
 	.b-head{
@@ -143,11 +143,12 @@
 /*resume*/
 	.b-resume{
 		width:800px;
-		margin:0 auto;
+		margin:15px auto 0;
 		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 		border-radius:4px;
 		padding:20px 70px;
 		background-color:#FDFFE3;
+		height:1000px;
 	}
 	.b-resume__title{
 		text-align:center;
@@ -173,4 +174,21 @@
 		box-shadow:none;
 		resize:none;
 		cursor:text;
+	}
+/*timeline*/
+	#timeline{
+		height:215px !important;
+		position:static !important;
+	}
+	.nav-previous{
+		display:none !important;
+	}
+	.nav-next{
+		display:none !important;
+	}
+	.slider-item-container{
+		display:none !important;
+	}
+	.slider-container-mask{
+		height:0 !important;
 	}
