@@ -1,0 +1,27 @@
+div.b-resume
+  h2.b-resume__title= me.firstName + ' ' + me.lastName
+  table
+    tr
+      td.b-section__title
+        h3 Feedback
+      td.b-section__definition
+        textarea(readonly=true, rows=1, cols=1)= me.location
+    tr
+      td.b-section__title
+        h3 Skills
+      td.b-section__definition
+        -for(var key in skills)
+          textarea(readonly=true)= '* '+skills[key]
+  h2.b-resume__title  Experience
+  table
+    -for(var key in positions)
+    tr
+      td.b-section__title
+        textarea(readonly=true, name="positions-"+key+"-title")= positions[key].title
+      td.b-section__definition
+        select(name="positions-"+key+"-startDate-month", value=positions[key].startDate.month)
+           option(value="12") Грудень
+        textarea(readonly=true, name="positions-"+key+"-startDate-year")= positions[key].startDate.year
+        select(name="positions-"+key+"-endDate-month", value=positions[key].endDate.year)
+          option(value="1") Січень
+        textarea(readonly=true, name="positions-"+key+"-endDate-year")= positions[key].endDate.year
