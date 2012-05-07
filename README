@@ -1,29 +1,10 @@
-Application Details
-Company:
 
-110A_team
-
-Application Name:
-
-resume
-
-API Key:
-
-f912s66vnvet
-
-Secret Key:
-
-h2bqZEQUd5qS8zRf
 
 
 
 nodejs + express + jade 
 
-Global setup:
 
- Set up git
-  git config --global user.name "Your Name"
-  git config --global user.email filmuzhik@gmail.com
       
 
 Next steps:
